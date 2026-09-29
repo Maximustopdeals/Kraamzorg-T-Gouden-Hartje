@@ -28,7 +28,7 @@ const waarom = [
 export default function OverMijPage() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero - Ongewijzigd, met de originele hero-foto */}
       <section className="hero">
         <div className="container hero__grid">
           <div>
@@ -64,15 +64,9 @@ export default function OverMijPage() {
                 Mijn aanpak
               </Link>
             </div>
-            <p className="hero__points" style={{ marginTop: "var(--sp-5)", fontWeight: 700, fontSize: "var(--fs-sm)", color: "var(--color-plum-800)" }}>
-              <span className="img-badge">
-                <IconHeart width={16} height={16} style={{ color: "var(--primary)" }} />
-                Warme, veilige start voor ieder gezin
-              </span>
-            </p>
           </div>
           <div className="hero__media">
-            <div className="portret-ring">
+            <div className="img-frame">
               <Image
                 src="/images/kraamzorg-t-gouden-hartje-over-mij-header.webp"
                 alt="Hanan El Morabit, ervaren kraamverzorgende in Almere met pasgeboren baby"
@@ -81,12 +75,16 @@ export default function OverMijPage() {
                 priority
               />
             </div>
+            <span className="hero__badge">
+              <IconHeart width={16} height={16} style={{ display: "inline", verticalAlign: "-3px", color: "var(--primary)" }} />{" "}
+              Warme, veilige start voor <strong>ieder gezin</strong>
+            </span>
           </div>
         </div>
       </section>
 
-      {/* Waarom */}
-      <section className="section">
+      {/* Waarom - Met de nieuwe, ingetogen foto van de kraamverzorgende */}
+      <section className="section section--soft">
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Uw premium keuze in Almere</span>
@@ -96,22 +94,38 @@ export default function OverMijPage() {
               uw gezin.
             </p>
           </div>
-          <div className="grid-3">
-            {waarom.map((item) => (
-              <article className="card" key={item.title}>
-                <div className="card__icon">
-                  <IconCheck />
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
+
+          <div className="grid-2" style={{ alignItems: "center", gap: "var(--sp-8)" }}>
+            {/* Kleine, ingetogen foto van de kraamverzorgende */}
+            <div className="img-frame" style={{ maxWidth: "380px", margin: "0 auto", aspectRatio: "3 / 4" }}>
+              <Image
+                src="/images/kraamverzorgende-hanan-over-mij.webp"
+                alt="Hanan El Morabit, kraamverzorgende bij 'T Gouden Hartje, wiegt liefdevol een pasgeboren baby"
+                width={600}
+                height={800}
+                loading="lazy"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+
+            {/* De 3 kaarten, verticaal gestapeld naast de foto */}
+            <div style={{ display: "grid", gap: "var(--sp-5)" }}>
+              {waarom.map((item) => (
+                <article className="card" key={item.title}>
+                  <div className="card__icon">
+                    <IconCheck />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section section--soft">
+      <section className="section">
         <div className="container">
           <div className="cta-band">
             <h2>Klaar voor een zorgeloze kraamtijd?</h2>
