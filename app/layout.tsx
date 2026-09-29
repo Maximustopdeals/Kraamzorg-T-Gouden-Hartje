@@ -1,0 +1,124 @@
+import type { Metadata, Viewport } from "next";
+import { Playfair_Display, Montserrat } from "next/font/google";
+import Script from "next/script";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import BackToTop from "@/components/BackToTop";
+import StickyCta from "@/components/StickyCta";
+import { site } from "@/lib/site";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Kraamzorg Almere – Warm & Persoonlijk | 'T Gouden Hartje",
+    template: "%s | Kraamzorg 'T Gouden Hartje",
+  },
+  description:
+    "Professionele kraamzorg in Almere met warmte, aandacht en rust. 'T Gouden Hartje biedt persoonlijke begeleiding tijdens jouw kraamtijd.",
+  verification: {
+    google: site.analytics.googleVerification,
+  },
+  openGraph: {
+    type: "website",
+    locale: "nl_NL",
+    siteName: site.name,
+    images: [
+      {
+        url: "/images/pasgeboren-baby-slaapt-kraamzorg-almere.webp",
+        width: 800,
+        height: 400,
+        alt: "Pasgeboren baby die rustig slaapt, verzorgd door kraamzorg 'T Gouden Hartje",
+      },
+    ],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#a5537d",
+  width: "device-width",
+  initialScale: 1,
+};
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: site.name,
+  description: site.tagline,
+  url: site.url,
+  telephone: site.phone,
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.street,
+    addressLocality: site.address.city,
+    addressCountry: "NL",
+  },
+  areaServed: ["Almere", "Bussum", "Huizen", "Utrecht", "Amsterdam", "Amersfoort"],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "22:00",
+  },
+  sameAs: [site.socials.facebook, site.socials.instagram, site.socials.snapchat],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="nl" className={`${playfair.variable} ${montserrat.variable}`}>
+      <body>
+        {/* Google Tag Manager */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.analytics.gtm}');`}
+        </Script>
+        {/* GA4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${site.analytics.ga4}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.analytics.ga4}');`}
+        </Script>
+
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${site.analytics.gtm}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+
+        <a href="#inhoud" className="skip-link">
+          Direct naar inhoud
+        </a>
+        <Header />
+        <main id="inhoud">{children}</main>
+        <Footer />
+        <StickyCta />
+        <WhatsAppFloat />
+        <BackToTop />
+      </body>
+    </html>
+  );
+}
