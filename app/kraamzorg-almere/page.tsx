@@ -83,42 +83,31 @@ export default function KraamzorgPage() {
               jouw unieke situatie in Almere.
             </p>
           </div>
-          <div className="grid-2" style={{ marginBottom: "var(--sp-7)" }}>
-            <div className="img-frame img-frame--tall">
-              <Image
-                src="/images/pasgeboren-baby-mutsje-kraamzorg-almere.webp"
-                alt="Pasgeboren baby met gehaakt mutsje slaapt rustig, kraamzorg op maat in Almere"
-                width={800}
-                height={893}
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <h3 style={{ fontSize: "var(--fs-2xl)" }}>Zorg die aansluit bij jullie ritme</h3>
-              <p>
-                Elk gezin is anders. Daarom kijken we samen naar wat jullie
-                nodig hebben: rust voor moeder, structuur voor de baby en
-                ruimte voor het hele gezin om te landen in de nieuwe situatie.
-              </p>
-              <ul className="check-list">
-                <li>
-                  <IconCheck />
-                  <span>Persoonlijk zorgplan na het intakegesprek</span>
-                </li>
-                <li>
-                  <IconCheck />
-                  <span>Flexibel in uren, van 24 tot 80 uur kraamzorg</span>
-                </li>
-                <li>
-                  <IconCheck />
-                  <span>Afstemming met jouw verloskundige</span>
-                </li>
-                <li>
-                  <IconCheck />
-                  <span>Warme aandacht voor moeder, baby én gezin</span>
-                </li>
-              </ul>
-            </div>
+          <div className="statement" style={{ marginBottom: "var(--sp-7)" }}>
+            <h3>Zorg die aansluit bij jullie ritme</h3>
+            <p>
+              Elk gezin is anders. Daarom kijken we samen naar wat jullie
+              nodig hebben: rust voor moeder, structuur voor de baby en
+              ruimte voor het hele gezin om te landen in de nieuwe situatie.
+            </p>
+            <ul className="check-list">
+              <li>
+                <IconCheck />
+                <span>Persoonlijk zorgplan na het intakegesprek</span>
+              </li>
+              <li>
+                <IconCheck />
+                <span>Flexibel in uren, van 24 tot 80 uur kraamzorg</span>
+              </li>
+              <li>
+                <IconCheck />
+                <span>Afstemming met jouw verloskundige</span>
+              </li>
+              <li>
+                <IconCheck />
+                <span>Warme aandacht voor moeder, baby én gezin</span>
+              </li>
+            </ul>
           </div>
           <div className="grid-3">
             <article className="card">
