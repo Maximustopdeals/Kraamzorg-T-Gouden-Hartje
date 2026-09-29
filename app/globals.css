@@ -372,6 +372,48 @@ a:hover { color: var(--primary-hover); }
 
 .card__icon svg { width: 26px; height: 26px; }
 
+/* Statement-blok: groot typografisch tekstblok zonder foto */
+.statement {
+  max-width: 52rem;
+  margin-inline: auto;
+  text-align: center;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8) var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.statement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-rose-300), var(--color-gold-300));
+}
+
+.statement h3 {
+  font-size: var(--fs-2xl);
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.statement p {
+  color: var(--text-muted);
+  max-width: 42rem;
+  margin-inline: auto;
+  line-height: 1.75;
+}
+
+.statement .check-list {
+  max-width: 30rem;
+  margin: var(--sp-6) auto 0;
+  text-align: left;
+}
+
 /* Lijst met gouden vinkjes */
 .check-list {
   list-style: none;
