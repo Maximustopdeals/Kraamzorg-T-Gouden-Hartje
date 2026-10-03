@@ -8,7 +8,7 @@ import { IconCheck, IconHeart, IconShield, IconStar } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Kraamzorg Almere | Warm & Persoonlijk | 'T Gouden Hartje",
   description:
-    "Professionele kraamzorg in Almere met warmte, aandacht en rust. 'T Gouden Hartje biedt persoonlijke begeleiding tijdens jouw kraamtijd.",
+    "Professionele kraamzorg in Almere met warmte, aandacht en rust. 'T Gouden Hartje biedt persoonlijke begeleiding tijdens jouw kraamtijd, met oog voor jouw gewoonten en wensen.",
   alternates: { canonical: "/" },
 };
 
@@ -24,7 +24,7 @@ export default function HomePage() {
             <p className="lead">
               Kies voor kraamzorg &apos;T Gouden Hartje, jouw vertrouwde steun in de
               kraamtijd. Persoonlijke en professionele begeleiding voor moeder,
-              baby en het hele gezin.
+              baby en het hele gezin — met oog voor jouw gewoonten en wensen.
             </p>
             <div className="hero__actions">
               <a
@@ -48,6 +48,10 @@ export default function HomePage() {
                 <IconCheck />
                 <span>Persoonlijke zorg aan huis in Almere en omgeving</span>
               </li>
+              <li>
+                <IconCheck />
+                <span>Ruimte voor jouw cultuur, taal en gewoonten</span>
+              </li>
             </ul>
           </div>
           <div className="hero__media">
@@ -59,6 +63,7 @@ export default function HomePage() {
                 height={893}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
+                fetchPriority="high"
               />
             </div>
             <span className="hero__badge">
@@ -174,19 +179,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Zorg op maat — cultuur, taal & gewoonten */}
       <section className="section section--soft">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Zorg op maat</span>
+            <h2>Kraamzorg die past bij jouw gezin, gewoonten en wensen</h2>
+            <p className="lead">
+              Elk gezin is anders. Of je nu kiest voor vertrouwde Nederlandse
+              kraamzorg of extra aandacht wilt voor culturele en religieuze
+              gebruiken — bij &apos;T Gouden Hartje voel je je thuis.
+            </p>
+          </div>
+          <div className="grid-3">
+            <article className="card">
+              <div className="card__icon">
+                <IconHeart />
+              </div>
+              <h3>Respect voor jouw gewoonten</h3>
+              <p>
+                Ruimte voor jouw rituelen, voedingswensen en familietradities.
+                Ik stem de zorg af op wat voor jullie belangrijk is — zonder
+                oordeel, met aandacht.
+              </p>
+            </article>
+            <article className="card">
+              <div className="card__icon">
+                <IconCheck />
+              </div>
+              <h3>Meerdere talen</h3>
+              <p>
+                Begeleiding in het Nederlands, Engels, Arabisch, Berbers of
+                Turks — zodat je je echt begrepen voelt in een kwetsbare
+                periode.
+              </p>
+            </article>
+            <article className="card">
+              <div className="card__icon">
+                <IconShield />
+              </div>
+              <h3>Persoonlijke afstemming</h3>
+              <p>
+                Tijdens het intakegesprek bespreken we jouw wensen rondom
+                privacy, hygiëne, voeding en bezoek. Jij bepaalt, ik
+                ondersteun.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section">
         <div className="container">
           <div className="cta-band">
             <span className="eyebrow" style={{ color: "var(--color-gold-300)" }}>
               Kraamzorg in Almere en omgeving
             </span>
-            <h2>Meld je vandaag nog aan voor deskundige kraamzorg aan huis</h2>
+            <h2>Vraag een vrijblijvend kennismakingsgesprek aan</h2>
             <p>
               Bij &apos;T Gouden Hartje bied ik persoonlijke en professionele
               begeleiding tijdens deze bijzondere periode in je leven. Als
               ervaren kraamverzorgende sta ik voor je klaar met liefdevolle zorg
-              en deskundig advies.
+              en deskundig advies — afgestemd op jouw gezin.
             </p>
             <div className="hero__actions">
               <a
@@ -195,7 +250,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Meld je aan
+                Inschrijven voor kraamzorg
               </a>
               <Link className="btn btn--ghost-light" href="/contact">
                 Stel een vraag
