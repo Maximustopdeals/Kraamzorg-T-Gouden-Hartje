@@ -7,7 +7,7 @@ import { IconCheck, IconHeart } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Hanan El Morabit | Kraamzorg in Almere met Hart & Ziel",
   description:
-    "Hanan El Morabit: uw vertrouwde kraamverzorgende in Almere. Warme, professionele zorg met ruim 25 jaar ervaring. Ontdek mijn aanpak.",
+    "Hanan El Morabit: uw vertrouwde kraamverzorgende in Almere. Warme, professionele zorg met ruim 20 jaar ervaring. Ontdek mijn aanpak.",
   alternates: { canonical: "/over-mij" },
 };
 
@@ -46,13 +46,13 @@ export default function OverMijPage() {
             <span className="eyebrow">Persoonlijke kraamzorg in Almere</span>
             <h1>Toegewijd aan persoonlijke kraamzorg, met hart en ziel</h1>
             <div className="hero__points">
-              <span className="img-badge">25+ jaar kraamzorg-ervaring</span>
+              <span className="img-badge">20+ jaar kraamzorg-ervaring</span>
               <span className="img-badge">Moeder van 4</span>
               <span className="img-badge">Almeerse zorg</span>
             </div>
             <p className="lead" style={{ marginTop: "1.5rem" }}>
               Ik ben Hanan El Morabit, uw toegewijde kraamverzorgende bij
-              &apos;T Gouden Hartje. Met ruim 25 jaar professionele ervaring in
+              &apos;T Gouden Hartje. Met ruim 20 jaar professionele ervaring in
               de kraamzorg en als moeder van vier kinderen weet ik als geen
               ander wat er nodig is voor een warme, veilige start.
             </p>
