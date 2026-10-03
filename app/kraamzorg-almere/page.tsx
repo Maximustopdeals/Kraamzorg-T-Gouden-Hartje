@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { kraamzorgFaqs } from "@/lib/content";
+import { faqJsonLd, breadcrumbJsonLd } from "@/lib/schema";
 import { IconCalendar, IconCheck, IconPhone } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -15,23 +17,50 @@ const stappen = [
   {
     title: "Aanmelding",
     text: "Binnen 5 minuten geregeld, direct duidelijkheid. Via de aanmeldknop kom je direct bij het digitale aanmeldformulier.",
-    points: ["Eenvoudig formulier, alleen essentiële informatie", "Directe bevestiging, je weet meteen dat het gelukt is", "Persoonlijk contact, ik bel je binnen 24 uur"],
+    points: [
+      "Eenvoudig formulier, alleen essentiële informatie",
+      "Directe bevestiging, je weet meteen dat het gelukt is",
+      "Persoonlijk contact, ik bel je binnen 24 uur",
+    ],
   },
   {
     title: "Intakegesprek",
     text: "Bij jou thuis of via videobellen leren we elkaar echt kennen. Jouw kans om al je vragen te stellen.",
-    points: ["Uitgebreide tijd, minimaal 1 uur voor al je vragen", "Medische checklist, volledige gezondheidsinventarisatie", "Persoonlijk plan, op maat gemaakt zorgschema"],
+    points: [
+      "Uitgebreide tijd, minimaal 1 uur voor al je vragen",
+      "Medische checklist, volledige gezondheidsinventarisatie",
+      "Persoonlijk plan, op maat gemaakt zorgschema",
+    ],
   },
   {
     title: "Nazorg",
     text: "Ook na de kraamweek sta je er niet alleen voor. Ik blijf bereikbaar voor vragen en aanvullende ondersteuning.",
-    points: ["Bereikbaarheid, 2 weken lang telefonisch bereikbaar", "Informatiepakket, handige naslaggids mee naar huis", "Netwerk, doorverwijzing naar lokale ondersteuning"],
+    points: [
+      "Bereikbaarheid, 2 weken lang telefonisch bereikbaar",
+      "Informatiepakket, handige naslaggids mee naar huis",
+      "Netwerk, doorverwijzing naar lokale ondersteuning",
+    ],
   },
 ];
 
 export default function KraamzorgPage() {
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Kraamzorg Almere", url: "/kraamzorg-almere" },
+  ]);
+  const faqs = faqJsonLd(kraamzorgFaqs);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqs) }}
+      />
+
       {/* Hero */}
       <section className="hero">
         <div className="container hero__grid">
@@ -43,7 +72,12 @@ export default function KraamzorgPage() {
               de mooiste en kwetsbaarste periode van uw leven.
             </p>
             <div className="hero__actions">
-              <a className="btn btn--primary" href={site.signupUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn btn--primary"
+                href={site.signupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconCalendar width={18} height={18} />
                 Plan een kennismaking
               </a>
@@ -65,6 +99,7 @@ export default function KraamzorgPage() {
                 alt="Pasgeboren baby met blauwe ogen in een zachte doek, kraamzorg in Almere"
                 width={600}
                 height={900}
+                sizes="(max-width: 768px) 100vw, 40vw"
                 priority
               />
             </div>
@@ -87,33 +122,19 @@ export default function KraamzorgPage() {
             <h3>Zorg die aansluit bij jullie ritme</h3>
             <p>
               Elk gezin is anders. Daarom kijken we samen naar wat jullie
-              nodig hebben: rust voor moeder, structuur voor de baby en
-              ruimte voor het hele gezin om te landen in de nieuwe situatie.
+              nodig hebben: rust voor moeder, structuur voor de baby en ruimte
+              voor het hele gezin om te landen in de nieuwe situatie.
             </p>
             <ul className="check-list">
-              <li>
-                <IconCheck />
-                <span>Persoonlijk zorgplan na het intakegesprek</span>
-              </li>
-              <li>
-                <IconCheck />
-                <span>Flexibel in uren, van 24 tot 80 uur kraamzorg</span>
-              </li>
-              <li>
-                <IconCheck />
-                <span>Afstemming met jouw verloskundige</span>
-              </li>
-              <li>
-                <IconCheck />
-                <span>Warme aandacht voor moeder, baby én gezin</span>
-              </li>
+              <li><IconCheck /><span>Persoonlijk zorgplan na het intakegesprek</span></li>
+              <li><IconCheck /><span>Flexibel in uren, van 24 tot 80 uur kraamzorg</span></li>
+              <li><IconCheck /><span>Afstemming met jouw verloskundige</span></li>
+              <li><IconCheck /><span>Warme aandacht voor moeder, baby én gezin</span></li>
             </ul>
           </div>
           <div className="grid-3">
             <article className="card">
-              <div className="card__icon">
-                <IconCheck />
-              </div>
+              <div className="card__icon"><IconCheck /></div>
               <h3>Kraamzorg op maat</h3>
               <p>
                 Tijdens een vrijblijvend intakegesprek bepalen we samen hoeveel
@@ -126,9 +147,7 @@ export default function KraamzorgPage() {
               </p>
             </article>
             <article className="card">
-              <div className="card__icon">
-                <IconCheck />
-              </div>
+              <div className="card__icon"><IconCheck /></div>
               <h3>Flexibele zorgduur</h3>
               <p>
                 Standaard bieden we 8 tot 10 dagen zorg, maar we passen ons
@@ -140,9 +159,7 @@ export default function KraamzorgPage() {
               </p>
             </article>
             <article className="card">
-              <div className="card__icon">
-                <IconCheck />
-              </div>
+              <div className="card__icon"><IconCheck /></div>
               <h3>Deskundige herindicatie</h3>
               <p>
                 Verandert uw situatie tijdens de bevalling of kraamweek? Dan
@@ -187,8 +204,26 @@ export default function KraamzorgPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQ */}
       <section className="section">
+        <div className="container" style={{ maxWidth: "50rem" }}>
+          <div className="section-head">
+            <span className="eyebrow">Veelgestelde vragen</span>
+            <h2>Antwoorden op jouw vragen over kraamzorg</h2>
+          </div>
+          <dl className="faq-list">
+            {kraamzorgFaqs.map((f) => (
+              <div key={f.q} className="faq-item">
+                <dt><h3>{f.q}</h3></dt>
+                <dd><p>{f.a}</p></dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section section--soft">
         <div className="container">
           <div className="cta-band">
             <h2>Zeker weten van de beste start?</h2>
@@ -197,7 +232,12 @@ export default function KraamzorgPage() {
               Geen verrassingen, alleen warmte en expertise.
             </p>
             <div className="hero__actions">
-              <a className="btn btn--gold" href={site.signupUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn btn--gold"
+                href={site.signupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconCalendar width={18} height={18} />
                 Plan direct een kennismaking
               </a>
