@@ -153,7 +153,7 @@ export default function HomePage() {
             </p>
             <div className="stat-row" style={{ marginTop: "1.5rem" }}>
               <div className="stat">
-                <strong>25+</strong>
+                <strong>20+</strong>
                 <span>jaar ervaring</span>
               </div>
               <div className="stat">
@@ -209,8 +209,8 @@ export default function HomePage() {
               </div>
               <h3>Meerdere talen</h3>
               <p>
-                Begeleiding in het Nederlands, Engels, Arabisch, Berbers of
-                Turks — zodat je je echt begrepen voelt in een kwetsbare
+                Begeleiding in het Nederlands, Engels, Arabisch en Berbers
+                zodat je je echt begrepen voelt in een kwetsbare
                 periode.
               </p>
             </article>
@@ -238,10 +238,10 @@ export default function HomePage() {
             </span>
             <h2>Vraag een vrijblijvend kennismakingsgesprek aan</h2>
             <p>
-              Bij &apos;T Gouden Hartje bied ik persoonlijke en professionele
+              Bij kraamzorg &apos;T Gouden Hartje bied ik persoonlijke en professionele
               begeleiding tijdens deze bijzondere periode in je leven. Als
               ervaren kraamverzorgende sta ik voor je klaar met liefdevolle zorg
-              en deskundig advies — afgestemd op jouw gezin.
+              en deskundig advies afgestemd op jouw gezin.
             </p>
             <div className="hero__actions">
               <a
