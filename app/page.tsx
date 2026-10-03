@@ -42,7 +42,7 @@ export default function HomePage() {
             <ul className="check-list" style={{ marginTop: "1.5rem" }}>
               <li>
                 <IconCheck />
-                <span>Betrouwbaar en zeer ervaren, met ruim 25 jaar in de kraamzorg</span>
+                <span>Betrouwbaar en zeer ervaren, met 20+ jaar in de kraamzorg</span>
               </li>
               <li>
                 <IconCheck />
