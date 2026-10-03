@@ -205,8 +205,8 @@ export default function KraamzorgPage() {
               </div>
               <h3>Meerdere talen</h3>
               <p>
-                Begeleiding in het Nederlands, Engels, Arabisch, Berbers of
-                Turks zodat je je in een kwetsbare periode echt begrepen
+                Begeleiding in het Nederlands, Engels, Arabisch of Berbers
+                zodat je je in een kwetsbare periode echt begrepen
                 voelt.
               </p>
             </article>
