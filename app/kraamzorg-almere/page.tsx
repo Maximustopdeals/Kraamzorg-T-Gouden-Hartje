@@ -69,7 +69,7 @@ export default function KraamzorgPage() {
             <h1>Een warm welkom voor uw kleintje</h1>
             <p className="lead">
               Met 47 jaar levenservaring en moeder van vier begeleid ik u door
-              de mooiste en kwetsbaarste periode van uw leven — met oog voor
+              de mooiste en kwetsbaarste periode van uw leven met oog voor
               wat voor uw gezin belangrijk is.
             </p>
             <div className="hero__actions">
@@ -89,7 +89,7 @@ export default function KraamzorgPage() {
             </div>
             <div className="hero__points">
               <span className="img-badge">Gecertificeerd</span>
-              <span className="img-badge">25+ jaar ervaring</span>
+              <span className="img-badge">20+ jaar ervaring</span>
               <span className="img-badge">Moeder van 4</span>
             </div>
           </div>
@@ -184,8 +184,8 @@ export default function KraamzorgPage() {
             <h2>Ruimte voor jouw gewoonten, taal en wensen</h2>
             <p className="lead">
               Elk gezin heeft eigen tradities, voorkeuren en verwachtingen
-              rondom de kraamtijd. Bij &apos;T Gouden Hartje stem ik de zorg af
-              op wat voor jullie belangrijk is — zonder oordeel, met aandacht.
+              rondom de kraamtijd. Bij kraamzorg &apos;T Gouden Hartje stem ik de zorg af
+              op wat voor jullie belangrijk is zonder oordeel, met aandacht.
             </p>
           </div>
           <div className="grid-3">
@@ -206,7 +206,7 @@ export default function KraamzorgPage() {
               <h3>Meerdere talen</h3>
               <p>
                 Begeleiding in het Nederlands, Engels, Arabisch, Berbers of
-                Turks — zodat je je in een kwetsbare periode echt begrepen
+                Turks zodat je je in een kwetsbare periode echt begrepen
                 voelt.
               </p>
             </article>
@@ -279,7 +279,7 @@ export default function KraamzorgPage() {
             <h2>Zeker weten van de beste start?</h2>
             <p>
               Vraag vandaag nog uw vrijblijvende kraamzorg-intake aan in Almere.
-              Geen verrassingen, alleen warmte en expertise — afgestemd op uw
+              Geen verrassingen, alleen warmte en expertise afgestemd op uw
               gezin.
             </p>
             <div className="hero__actions">
