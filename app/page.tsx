@@ -2,50 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { aanpak, usps } from "@/lib/content";
 import { IconCheck, IconHeart, IconShield, IconStar } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Kraamzorg Almere | Warm & Persoonlijk",
+  title: "Kraamzorg Almere | Warm & Persoonlijk | 'T Gouden Hartje",
   description:
     "Professionele kraamzorg in Almere met warmte, aandacht en rust. 'T Gouden Hartje biedt persoonlijke begeleiding tijdens jouw kraamtijd.",
   alternates: { canonical: "/" },
 };
-
-const aanpak = [
-  {
-    title: "Professioneel",
-    text: "Nieuw leven verwelkomen, moeders ondersteunen: als kraamverzorgende creëer ik warme startmomenten met zorg en expertise.",
-  },
-  {
-    title: "Aandachtig",
-    text: "In aandachtige zorg omarm ik nieuw leven en ondersteun ik moeders als professionele kraamverzorgende.",
-  },
-  {
-    title: "Educatief",
-    text: "Nieuw leven verwelkomen met educatieve ondersteuning voor ouders, als toegewijde kraamverzorgende deskundig bijgestaan.",
-  },
-  {
-    title: "Ondersteunend",
-    text: "Als ondersteunende kraamverzorgende bied ik vakkundige begeleiding bij het ouderschap.",
-  },
-  {
-    title: "Verzorgend",
-    text: "Met verzorgende toewijding ondersteun ik ouders en verwelkom ik nieuw leven als capabel kraamverzorgende.",
-  },
-  {
-    title: "Afstemmend",
-    text: "Afstemmend op behoeften bied ik als kraamverzorgende bekwame ondersteuning aan nieuwe ouders en baby's.",
-  },
-];
-
-const usps = [
-  "Persoonlijke kraamzorg, met aandacht voor jouw gezin",
-  "Een vertrouwd gezicht tijdens de kraamweek",
-  "Ruimte voor vragen en onzekerheden",
-  "Aandacht voor moeder, baby én gezin",
-  "Tijdig kennismaken en wensen bespreken",
-  "Kraamzorg in Almere en omgeving",
-];
 
 export default function HomePage() {
   return (
@@ -55,16 +20,19 @@ export default function HomePage() {
         <div className="container hero__grid">
           <div>
             <span className="eyebrow">Kraamzorg Almere, warm &amp; persoonlijk</span>
-            <h1>
-              Ervaar kraamzorg in Almere met warmte, aandacht en rust
-            </h1>
+            <h1>Ervaar kraamzorg in Almere met warmte, aandacht en rust</h1>
             <p className="lead">
               Kies voor kraamzorg &apos;T Gouden Hartje, jouw vertrouwde steun in de
               kraamtijd. Persoonlijke en professionele begeleiding voor moeder,
               baby en het hele gezin.
             </p>
             <div className="hero__actions">
-              <a className="btn btn--primary" href={site.signupUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn btn--primary"
+                href={site.signupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Inschrijven voor kraamzorg
               </a>
               <Link className="btn btn--outline" href="/kraamzorg-almere">
@@ -89,11 +57,16 @@ export default function HomePage() {
                 alt="Pasgeboren baby met gehaakt mutsje slaapt rustig, kraamzorg 'T Gouden Hartje Almere"
                 width={800}
                 height={893}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
             </div>
             <span className="hero__badge">
-              <IconHeart width={16} height={16} style={{ display: "inline", verticalAlign: "-3px", color: "var(--primary)" }} />{" "}
+              <IconHeart
+                width={16}
+                height={16}
+                style={{ display: "inline", verticalAlign: "-3px", color: "var(--primary)" }}
+              />{" "}
               Persoonlijke zorg voor <strong>moeder en kind</strong>
             </span>
           </div>
@@ -109,6 +82,7 @@ export default function HomePage() {
               alt="Pasgeboren baby die rustig slaapt, verzorgd door kraamzorg 'T Gouden Hartje"
               width={800}
               height={400}
+              sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
             />
           </div>
@@ -146,9 +120,7 @@ export default function HomePage() {
           <div className="section-head">
             <span className="eyebrow">Mijn aanpak bij Kraamzorg &apos;T Gouden Hartje</span>
             <h2>Mijn belofte aan jou</h2>
-            <p className="lead">
-              Zes kernwoorden die mijn manier van werken samenvatten.
-            </p>
+            <p className="lead">Zes kernwoorden die mijn manier van werken samenvatten.</p>
           </div>
           <div className="grid-3">
             {aanpak.map((item) => (
@@ -217,7 +189,12 @@ export default function HomePage() {
               en deskundig advies.
             </p>
             <div className="hero__actions">
-              <a className="btn btn--gold" href={site.signupUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                className="btn btn--gold"
+                href={site.signupUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Meld je aan
               </a>
               <Link className="btn btn--ghost-light" href="/contact">
@@ -226,7 +203,12 @@ export default function HomePage() {
             </div>
             <div className="cta-band__meta">
               <span>
-                <IconStar width={14} height={14} style={{ display: "inline", verticalAlign: "-2px" }} /> Beoordeeld door gezinnen uit Almere
+                <IconStar
+                  width={14}
+                  height={14}
+                  style={{ display: "inline", verticalAlign: "-2px" }}
+                />{" "}
+                Beoordeeld door gezinnen uit Almere
               </span>
               <span>Reactie binnen 24 uur</span>
               <span>Vrijblijvend kennismaken</span>
