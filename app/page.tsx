@@ -59,7 +59,7 @@ export default function HomePage() {
               Ervaar kraamzorg in Almere met warmte, aandacht en rust
             </h1>
             <p className="lead">
-              Kies voor &apos;T Gouden Hartje, jouw vertrouwde steun in de
+              Kies voor kraamzorg &apos;T Gouden Hartje, jouw vertrouwde steun in de
               kraamtijd. Persoonlijke en professionele begeleiding voor moeder,
               baby en het hele gezin.
             </p>
