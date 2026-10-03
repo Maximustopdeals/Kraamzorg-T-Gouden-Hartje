@@ -4,12 +4,12 @@ import Image from "next/image";
 import { site } from "@/lib/site";
 import { kraamzorgFaqs } from "@/lib/content";
 import { faqJsonLd, breadcrumbJsonLd } from "@/lib/schema";
-import { IconCalendar, IconCheck, IconPhone } from "@/components/icons";
+import { IconCalendar, IconCheck, IconHeart, IconPhone, IconShield } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Persoonlijke Kraamzorg Almere | Ervaren Moeder & Professional",
   description:
-    "Hanan El Morabit: waar moederliefde en medische expertise samenkomen. Professionele kraamzorg in Almere met persoonlijke aandacht voor jouw gezin.",
+    "Hanan El Morabit: waar moederliefde en medische expertise samenkomen. Professionele kraamzorg in Almere met persoonlijke aandacht voor jouw gezin, gewoonten en wensen.",
   alternates: { canonical: "/kraamzorg-almere" },
 };
 
@@ -25,7 +25,7 @@ const stappen = [
   },
   {
     title: "Intakegesprek",
-    text: "Bij jou thuis of via videobellen leren we elkaar echt kennen. Jouw kans om al je vragen te stellen.",
+    text: "Bij jou thuis of via videobellen leren we elkaar echt kennen. Jouw kans om al je vragen te stellen en wensen te bespreken.",
     points: [
       "Uitgebreide tijd, minimaal 1 uur voor al je vragen",
       "Medische checklist, volledige gezondheidsinventarisatie",
@@ -69,7 +69,8 @@ export default function KraamzorgPage() {
             <h1>Een warm welkom voor uw kleintje</h1>
             <p className="lead">
               Met 47 jaar levenservaring en moeder van vier begeleid ik u door
-              de mooiste en kwetsbaarste periode van uw leven.
+              de mooiste en kwetsbaarste periode van uw leven — met oog voor
+              wat voor uw gezin belangrijk is.
             </p>
             <div className="hero__actions">
               <a
@@ -88,8 +89,8 @@ export default function KraamzorgPage() {
             </div>
             <div className="hero__points">
               <span className="img-badge">Gecertificeerd</span>
-              <span className="img-badge">20+ jaar ervaring</span>
-              <span className="img-badge">Moederliefde</span>
+              <span className="img-badge">25+ jaar ervaring</span>
+              <span className="img-badge">Moeder van 4</span>
             </div>
           </div>
           <div className="hero__media">
@@ -101,6 +102,7 @@ export default function KraamzorgPage() {
                 height={900}
                 sizes="(max-width: 768px) 100vw, 40vw"
                 priority
+                fetchPriority="high"
               />
             </div>
           </div>
@@ -174,8 +176,56 @@ export default function KraamzorgPage() {
         </div>
       </section>
 
-      {/* Proces */}
+      {/* Zorg op maat — cultuur, taal & gewoonten */}
       <section className="section section--soft">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Zorg op maat</span>
+            <h2>Ruimte voor jouw gewoonten, taal en wensen</h2>
+            <p className="lead">
+              Elk gezin heeft eigen tradities, voorkeuren en verwachtingen
+              rondom de kraamtijd. Bij &apos;T Gouden Hartje stem ik de zorg af
+              op wat voor jullie belangrijk is — zonder oordeel, met aandacht.
+            </p>
+          </div>
+          <div className="grid-3">
+            <article className="card">
+              <div className="card__icon">
+                <IconHeart />
+              </div>
+              <h3>Respect voor jouw gewoonten</h3>
+              <p>
+                Ruimte voor rituelen, voedingswensen, hygiëne en
+                familietradities. Ik luister eerst, en pas de zorg daarop aan.
+              </p>
+            </article>
+            <article className="card">
+              <div className="card__icon">
+                <IconCheck />
+              </div>
+              <h3>Meerdere talen</h3>
+              <p>
+                Begeleiding in het Nederlands, Engels, Arabisch, Berbers of
+                Turks — zodat je je in een kwetsbare periode echt begrepen
+                voelt.
+              </p>
+            </article>
+            <article className="card">
+              <div className="card__icon">
+                <IconShield />
+              </div>
+              <h3>Persoonlijke afstemming</h3>
+              <p>
+                In het intakegesprek bespreken we wensen rondom privacy,
+                voeding, bezoek en gewoonten. Jij bepaalt, ik ondersteun.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Proces */}
+      <section className="section">
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Mijn persoonlijke kraamzorgproces in Almere</span>
@@ -205,7 +255,7 @@ export default function KraamzorgPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section">
+      <section className="section section--soft">
         <div className="container" style={{ maxWidth: "50rem" }}>
           <div className="section-head">
             <span className="eyebrow">Veelgestelde vragen</span>
@@ -223,13 +273,14 @@ export default function KraamzorgPage() {
       </section>
 
       {/* CTA */}
-      <section className="section section--soft">
+      <section className="section">
         <div className="container">
           <div className="cta-band">
             <h2>Zeker weten van de beste start?</h2>
             <p>
               Vraag vandaag nog uw vrijblijvende kraamzorg-intake aan in Almere.
-              Geen verrassingen, alleen warmte en expertise.
+              Geen verrassingen, alleen warmte en expertise — afgestemd op uw
+              gezin.
             </p>
             <div className="hero__actions">
               <a
@@ -239,10 +290,10 @@ export default function KraamzorgPage() {
                 rel="noopener noreferrer"
               >
                 <IconCalendar width={18} height={18} />
-                Plan direct een kennismaking
+                Plan een kennismaking
               </a>
               <Link className="btn btn--ghost-light" href="/contact">
-                Direct aanmelden
+                Stel een vraag
               </Link>
             </div>
             <div className="cta-band__meta">
