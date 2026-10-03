@@ -13,6 +13,12 @@ export const site = {
   address: {
     street: "Merenguestraat 10",
     city: "Almere",
+    postalCode: "1318 XX", // aanvullen
+    country: "NL",
+  },
+  geo: {
+    latitude: 52.3702,   // aanvullen met exacte coördinaten
+    longitude: 5.2141,
   },
   phone: "06-17060672",
   phoneHref: "tel:+31617060672",
@@ -22,12 +28,16 @@ export const site = {
   hours: "maandag t/m vrijdag, 09:00 – 22:00 uur",
   kvk: "92065414",
   kckz: "217637",
-  signupUrl: "https://kraamzorgtgoudenhartje.mijngeboortezorg.nl/Aanvragen/kraamzorg",
-  formspreeEndpoint: "https://formspree.io/f/xbglqdjy",
+  signupUrl:
+    "https://kraamzorgtgoudenhartje.mijngeboortezorg.nl/Aanvragen/kraamzorg",
+  formspreeEndpoint:
+    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
+    "https://formspree.io/f/xbglqdjy",
   socials: {
     facebook: "https://www.facebook.com/kraamzorg.t.gouden.hartje/",
     instagram: "https://www.instagram.com/kraamzorg.tgoudenhartje/",
-    snapchat: "https://www.snapchat.com/@oumsafae-imane?share_id=yMkMtTesGOY&locale=nl-NL",
+    snapchat:
+      "https://www.snapchat.com/@oumsafae-imane?share_id=yMkMtTesGOY&locale=nl-NL",
   },
   analytics: {
     gtm: "GTM-NL3JXJLJ",
