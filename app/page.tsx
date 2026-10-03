@@ -145,7 +145,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container grid-2">
           <div>
-            <span className="eyebrow">Waarom &apos;T Gouden Hartje</span>
+            <span className="eyebrow">Waarom kraamzorg &apos;T Gouden Hartje</span>
             <h2>Persoonlijke kraamzorg, met aandacht voor jouw gezin</h2>
             <p className="lead">
               Niet zomaar kraamzorg, maar een warme en professionele start voor
@@ -188,7 +188,7 @@ export default function HomePage() {
             <p className="lead">
               Elk gezin is anders. Of je nu kiest voor vertrouwde Nederlandse
               kraamzorg of extra aandacht wilt voor culturele en religieuze
-              gebruiken — bij &apos;T Gouden Hartje voel je je thuis.
+              gebruiken, bij kraamzorg &apos;T Gouden Hartje voel je je thuis.
             </p>
           </div>
           <div className="grid-3">
@@ -199,7 +199,7 @@ export default function HomePage() {
               <h3>Respect voor jouw gewoonten</h3>
               <p>
                 Ruimte voor jouw rituelen, voedingswensen en familietradities.
-                Ik stem de zorg af op wat voor jullie belangrijk is — zonder
+                Ik stem de zorg af op wat voor jullie belangrijk is zonder
                 oordeel, met aandacht.
               </p>
             </article>
