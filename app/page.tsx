@@ -24,7 +24,7 @@ export default function HomePage() {
             <p className="lead">
               Kies voor kraamzorg &apos;T Gouden Hartje, jouw vertrouwde steun in de
               kraamtijd. Persoonlijke en professionele begeleiding voor moeder,
-              baby en het hele gezin — met oog voor jouw gewoonten en wensen.
+              baby en het hele gezin met oog voor jouw gewoonten en wensen.
             </p>
             <div className="hero__actions">
               <a
