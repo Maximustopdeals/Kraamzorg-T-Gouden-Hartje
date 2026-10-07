@@ -947,7 +947,7 @@ a:hover { color: var(--primary-hover); }
 .form__status--ok { background: #e9f7ee; color: #1d6b3a; border: 1px solid #b9e4c7; }
 .form__status--err { background: #fdeeee; color: #9c2b2b; border: 1px solid #f2c4c4; }
 
-/* ---------- 12. Footer ---------- */
+/* ---------- 12. Footer (4 kolommen) ---------- */
 .footer {
   background: var(--footer-bg);
   color: var(--footer-text);
@@ -966,19 +966,23 @@ a:hover { color: var(--primary-hover); }
   background: linear-gradient(90deg, transparent, rgba(233, 207, 122, 0.3), transparent);
 }
 
+/* 4-koloms grid */
 .footer__grid {
   display: grid;
-  gap: var(--sp-8);
+  gap: var(--sp-8) var(--sp-6);
+  grid-template-columns: 1fr;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 640px) {
   .footer__grid {
-    grid-template-columns: 1.1fr 0.9fr 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
-  .footer__grid > nav,
-  .footer__grid > div:last-child {
-    justify-self: center;
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    align-items: start;
   }
 }
 
@@ -999,6 +1003,7 @@ a:hover { color: var(--primary-hover); }
   margin-top: var(--sp-3);
 }
 
+/* Blok 1 — Brand */
 .footer__brand img {
   width: 88px;
   height: 88px;
@@ -1007,19 +1012,47 @@ a:hover { color: var(--primary-hover); }
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.footer__meta { margin-top: var(--sp-5); display: grid; gap: var(--sp-2); }
+.footer__tagline {
+  color: var(--footer-text);
+  margin: 0 0 var(--sp-5);
+  line-height: 1.65;
+  max-width: 32ch;
+}
 
-.footer a { color: #e5a8c6; text-decoration: none; }
+.footer__meta {
+  margin-top: var(--sp-5);
+  display: grid;
+  gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: #9c8191;
+}
+
+/* Links in footer */
+.footer a {
+  color: #e5a8c6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
 .footer a:hover { color: var(--color-gold-300); }
 
-.footer__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
+/* Blok 2 & 3 — Lijsten */
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sp-3);
+}
 
-.footer__contact { list-style: none; margin: 0 0 var(--sp-6); padding: 0; display: grid; gap: var(--sp-4); }
-
-.footer__contact li { display: flex; gap: var(--sp-3); align-items: flex-start; }
-.footer__contact svg { flex: none; width: 20px; height: 20px; margin-top: 3px; color: var(--color-rose-400); }
-
-.footer__badges { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; margin-top: var(--sp-5); }
+/* Blok 3 — Badges */
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-top: var(--sp-5);
+}
 
 .footer__badges .badge-pill {
   display: inline-flex;
@@ -1032,9 +1065,64 @@ a:hover { color: var(--primary-hover); }
   color: #dcc3d2;
 }
 
-.footer__badges img { width: 64px; border-radius: 6px; }
+.footer__badges img {
+  width: 64px;
+  border-radius: 6px;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
 
-.footer__socials { display: flex; gap: var(--sp-3); margin-top: var(--sp-6); }
+/* Blok 4 — Contact */
+.footer__contact {
+  list-style: none;
+  margin: 0 0 var(--sp-6);
+  padding: 0;
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.footer__contact li {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.footer__contact svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  color: var(--color-rose-400);
+}
+
+.footer__hours-title {
+  margin-top: var(--sp-2);
+}
+
+.footer__hours {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  margin: 0;
+  color: var(--footer-text);
+  line-height: 1.55;
+}
+
+.footer__hours svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  color: var(--color-rose-400);
+}
+
+/* Socials */
+.footer__socials {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-6);
+}
 
 .footer__socials a {
   display: grid;
@@ -1055,16 +1143,44 @@ a:hover { color: var(--primary-hover); }
 
 .footer__socials svg { width: 20px; height: 20px; }
 
+/* Copyright-balk */
 .footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   margin-top: var(--sp-8);
   padding: var(--sp-5) 0 calc(var(--sp-5) + env(safe-area-inset-bottom));
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3) var(--sp-6);
-  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--sp-3);
   font-size: var(--fs-xs);
   color: #9c8191;
+}
+
+@media (min-width: 768px) {
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--sp-6);
+  }
+}
+
+.footer__bottom-left {
+  display: grid;
+  gap: var(--sp-1);
+}
+
+.footer__bottom-right {
+  white-space: nowrap;
+}
+
+.footer__bottom-right a {
+  color: #dcc3d2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__bottom-right a:hover {
+  color: var(--color-gold-300);
 }
 
 /* ---------- 13. Zwevende elementen ---------- */
@@ -1352,18 +1468,13 @@ a:hover { color: var(--primary-hover); }
 .stat span { font-size: var(--fs-sm); color: var(--text-muted); }
 
 /* ---------- 14b. Elfsight Reviews (met skeleton) ---------- */
-
-/* De wrapper om de widget en skeleton heen.
-   Zorgt voor de basis layout en voorkomt layout shift. */
 .elfsight-wrapper {
   position: relative;
   width: 100%;
-  min-height: 380px; /* Reserveer ruimte voor de reviews */
+  min-height: 380px;
   margin-block: var(--sp-6);
 }
 
-/* De daadwerkelijke widget container (de div met het ID).
-   Deze vult de wrapper en fade't in zodra de widget klaar is. */
 .elfsight-wrapper > [class*="elfsight-app"] {
   position: relative;
   z-index: 2;
@@ -1371,8 +1482,6 @@ a:hover { color: var(--primary-hover); }
   transition: opacity 0.6s ease;
 }
 
-/* De skeleton placeholder.
-   Wordt absoluut gepositioneerd over de widget heen. */
 .elfsight-skeleton {
   position: absolute;
   inset: 0;
@@ -1387,7 +1496,6 @@ a:hover { color: var(--primary-hover); }
   animation: elfsight-pulse 1.8s infinite ease-in-out;
 }
 
-/* Skeleton onderdelen */
 .skeleton-header {
   height: 28px;
   width: 45%;
@@ -1403,14 +1511,12 @@ a:hover { color: var(--primary-hover); }
   border-left: 4px solid var(--color-rose-300);
 }
 
-/* De pulserende animatie */
 @keyframes elfsight-pulse {
   0% { opacity: 0.7; }
   50% { opacity: 1; }
   100% { opacity: 0.7; }
 }
 
-/* Toegankelijkheid: geen animatie voor mensen die dat niet willen */
 @media (prefers-reduced-motion: reduce) {
   .elfsight-skeleton {
     animation: none;
@@ -1418,7 +1524,6 @@ a:hover { color: var(--primary-hover); }
   }
 }
 
-/* Fallback tekst als het script helemaal niet laadt (noscript) */
 .elfsight-wrapper noscript p {
   text-align: center;
   color: var(--text-muted);
