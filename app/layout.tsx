@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next"; 
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -8,6 +8,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BackToTop from "@/components/BackToTop";
 import StickyCta from "@/components/StickyCta";
 import CookieConsent from "@/components/CookieConsent";
+import FooterVisibility from "@/components/FooterVisibility"; // ← NIEUW
 import { site } from "@/lib/site";
 import { localBusinessJsonLd } from "@/lib/schema";
 
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsAppFloat />
         <BackToTop />
         <CookieConsent />
+        <FooterVisibility />
       </body>
     </html>
   );
