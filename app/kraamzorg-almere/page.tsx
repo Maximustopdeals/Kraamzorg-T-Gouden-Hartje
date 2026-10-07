@@ -66,11 +66,9 @@ export default function KraamzorgPage() {
         <div className="container hero__grid">
           <div>
             <span className="eyebrow">Kraamzorg in Almere bij &apos;T Gouden Hartje</span>
-            <h1>Een warm welkom voor uw kleintje</h1>
+            <h1>Persoonlijke kraamzorg met aandacht voor uw gezin</h1>
             <p className="lead">
-              Met 47 jaar levenservaring en moeder van vier begeleid ik u door
-              de mooiste en kwetsbaarste periode van uw leven met oog voor
-              wat voor uw gezin belangrijk is.
+              Met 47 jaar levenservaring en als moeder van vier begeleid ik gezinnen tijdens de kraamtijd met persoonlijke kraamzorg, rust en aandacht. Met oog voor uw wensen en gewoonten zorg ik voor een vertrouwde en liefdevolle start voor moeder, baby en gezin.
             </p>
             <div className="hero__actions">
               <a
