@@ -20,11 +20,9 @@ export default function HomePage() {
         <div className="container hero__grid">
           <div>
             <span className="eyebrow">Kraamzorg Almere, warm &amp; persoonlijk</span>
-            <h1>Ervaar kraamzorg in Almere met warmte, aandacht en rust</h1>
+            <h1>Kraamzorg in Almere met aandacht, rust en vertrouwen</h1>
             <p className="lead">
-              Kies voor kraamzorg &apos;T Gouden Hartje, jouw vertrouwde steun in de
-              kraamtijd. Persoonlijke en professionele begeleiding voor moeder,
-              baby en het hele gezin met oog voor jouw gewoonten en wensen.
+              Persoonlijke kraamzorg in Almere met aandacht voor rust, vertrouwen en een liefdevolle start. Begeleiding op maat voor moeder, baby en gezin tijdens de kraamtijd.
             </p>
             <div className="hero__actions">
               <a
@@ -42,7 +40,7 @@ export default function HomePage() {
             <ul className="check-list" style={{ marginTop: "1.5rem" }}>
               <li>
                 <IconCheck />
-                <span>Betrouwbaar en zeer ervaren, met 20+ jaar in de kraamzorg</span>
+                <span>Betrouwbaar en zeer ervaren, met 20+ jaar ervaring in de kraamzorg</span>
               </li>
               <li>
                 <IconCheck />
