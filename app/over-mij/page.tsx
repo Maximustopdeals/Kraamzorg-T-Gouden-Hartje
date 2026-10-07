@@ -51,7 +51,7 @@ export default function OverMijPage() {
               <span className="img-badge">Almeerse zorg</span>
             </div>
             <p className="lead" style={{ marginTop: "1.5rem" }}>
-              Ik ben Hanan El Morabit, ervaren kraamverzorgende bij 'T Gouden Hartje. Met meer dan 20 jaar ervaring in de kraamzorg ondersteun ik gezinnen met persoonlijke kraamzorg tijdens de eerste dagen na de bevalling.
+              Ik ben Hanan El Morabit, ervaren kraamverzorgende bij 'T Gouden Hartje. Met meer dan 20 jaar ervaring in de kraamzorg ondersteun ik gezinnen tijdens de eerste dagen na de bevalling met persoonlijke, betrokken begeleiding en deskundige zorg.
             </p>
             <p>
               Mijn aanpak combineert professionele deskundigheid met oprechte,
