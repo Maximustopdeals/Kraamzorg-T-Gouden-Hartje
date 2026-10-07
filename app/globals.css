@@ -1067,9 +1067,9 @@ a:hover { color: var(--primary-hover); }
 
 .footer__badges img {
   width: 64px;
+  height: auto;
   border-radius: 6px;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  /* Geen filter — SBB-logo behoudt eigen kleuren */
 }
 
 /* Blok 4 — Contact */
