@@ -44,17 +44,14 @@ export default function OverMijPage() {
         <div className="container hero__grid">
           <div>
             <span className="eyebrow">Persoonlijke kraamzorg in Almere</span>
-            <h1>Toegewijd aan persoonlijke kraamzorg, met hart en ziel</h1>
+            <h1>Toegewijde kraamverzorgende met meer dan 20 jaar ervaring</h1>
             <div className="hero__points">
               <span className="img-badge">20+ jaar kraamzorg-ervaring</span>
               <span className="img-badge">Moeder van 4</span>
               <span className="img-badge">Almeerse zorg</span>
             </div>
             <p className="lead" style={{ marginTop: "1.5rem" }}>
-              Ik ben Hanan El Morabit, uw toegewijde kraamverzorgende bij
-              &apos;T Gouden Hartje. Met 20+ jaar professionele ervaring in
-              de kraamzorg en als moeder van vier kinderen weet ik als geen
-              ander wat er nodig is voor een warme, veilige start.
+              Ik ben Hanan El Morabit, ervaren kraamverzorgende bij 'T Gouden Hartje. Met meer dan 20 jaar ervaring in de kraamzorg ondersteun ik gezinnen met persoonlijke kraamzorg tijdens de eerste dagen na de bevalling.
             </p>
             <p>
               Mijn aanpak combineert professionele deskundigheid met oprechte,
