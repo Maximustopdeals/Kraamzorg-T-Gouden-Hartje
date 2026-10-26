@@ -4,11 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
-import BackToTop from "@/components/BackToTop";
-import StickyCta from "@/components/StickyCta";
-import CookieConsent from "@/components/CookieConsent";
-import FooterVisibility from "@/components/FooterVisibility"; // ← NIEUW
+import ClientWidgets from "@/components/ClientWidgets"; // ✅ NIEUW: De lazy wrapper
 import { site } from "@/lib/site";
 import { localBusinessJsonLd } from "@/lib/schema";
 
@@ -16,12 +12,14 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -85,12 +83,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://elfsightcdn.com" />
         <link rel="dns-prefetch" href="https://static.elfsight.com" />
+        
         {/* Consent Mode v2 — moet vóór GTM */}
         <Script id="consent-default" strategy="beforeInteractive">
           {consentDefault}
         </Script>
-        {/* GTM — enige analytics-laag. GA4 configureren in GTM. */}
-        <Script id="gtm" strategy="afterInteractive">
+        
+        {/* ✅ FIX: GTM laadt nu pas als de pagina klaar is met laden */}
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.analytics.gtm}');`}
         </Script>
       </head>
@@ -118,11 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="inhoud">{children}</main>
         <Footer />
-        <StickyCta />
-        <WhatsAppFloat />
-        <BackToTop />
-        <CookieConsent />
-        <FooterVisibility />
+        
+        {/* ✅ FIX: De zwevende widgets en banners worden nu lui ingeladen */}
+        <ClientWidgets />
       </body>
     </html>
   );
