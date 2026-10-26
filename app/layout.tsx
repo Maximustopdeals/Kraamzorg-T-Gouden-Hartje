@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next"; 
 import { Playfair_Display, Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
