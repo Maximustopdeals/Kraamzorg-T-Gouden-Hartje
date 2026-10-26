@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BackToTop from "@/components/BackToTop";
 import StickyCta from "@/components/StickyCta";
