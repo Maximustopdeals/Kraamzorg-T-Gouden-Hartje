@@ -168,6 +168,39 @@ export default function ContactForm() {
         <textarea id="info" name="aanvullende_informatie" />
       </div>
 
+      {/* NIEUW: Kraampakket Optie */}
+      <div 
+        style={{ 
+          marginTop: "var(--sp-6)", 
+          marginBottom: "var(--sp-5)",
+          padding: "1.5rem", 
+          backgroundColor: "rgba(212, 175, 55, 0.05)", 
+          borderRadius: "var(--radius-md)", 
+          border: "2px dashed var(--primary)" 
+        }}
+      >
+        <label style={{ display: "flex", alignItems: "flex-start", gap: "1rem", cursor: "pointer" }}>
+          <input 
+            type="checkbox" 
+            name="kraampakket_bestellen" 
+            value="Ja, ik wil het kraampakket (€40,00) bestellen" 
+            style={{ marginTop: "0.25rem", width: "1.5rem", height: "1.5rem", accentColor: "var(--primary)", flexShrink: 0 }} 
+          />
+          <div>
+            <strong style={{ display: "block", fontSize: "var(--fs-lg)", color: "var(--primary)", marginBottom: "0.25rem" }}>
+              Voeg het complete Kraampakket toe (€40,00)
+            </strong>
+            <span style={{ fontSize: "var(--fs-sm)", color: "var(--text-muted)", display: "block", marginBottom: "0.5rem" }}>
+              Alles wat je nodig hebt voor een frisse en zorgeloze kraamperiode, overzichtelijk voor je verzameld. 
+              (Inclusief matrasbeschermers, kraamverbanden, alcohol 70% en meer).
+            </span>
+            <span style={{ fontSize: "var(--fs-xs)", color: "var(--text-muted)", fontStyle: "italic", display: "block" }}>
+              * De kraamverzorgende neemt dit tijdens de intake met je door en verrekent dit met de zorg.
+            </span>
+          </div>
+        </label>
+      </div>
+
       {status === "err" && (
         <div className="form__status form__status--err" role="alert">
           Versturen is niet gelukt. Probeer het opnieuw, of neem direct contact
