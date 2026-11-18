@@ -174,6 +174,60 @@ export default function KraamzorgPage() {
         </div>
       </section>
 
+      {/* NIEUWE SECTIE: Kraampakket */}
+      <section className="section section--tint">
+        <div className="container">
+          <div 
+            style={{ 
+              display: "grid", 
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", 
+              gap: "3rem", 
+              alignItems: "center" 
+            }}
+          >
+            {/* Afbeelding */}
+            <div className="img-frame" style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-lg)" }}>
+              <Image
+                src="/images/kraampakket.webp"
+                alt="Compleet kraampakket met benodigdheden voor de kraamperiode"
+                width={600}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+
+            {/* Tekst & Call to Action */}
+            <div>
+              <span className="eyebrow">Zorgeloos voorbereiden</span>
+              <h2 style={{ fontSize: "var(--fs-3xl)", marginBottom: "var(--sp-4)" }}>
+                Alles voor een frisse en zorgeloze kraamperiode
+              </h2>
+              <p className="lead" style={{ marginBottom: "var(--sp-5)" }}>
+                De komst van je baby brengt al genoeg mooie drukte met zich mee. Met het complete <strong>Kraampakket van 't Gouden Hartje</strong> hoef je je geen zorgen te maken over losse boodschappen. Alle essentiële benodigdheden zijn overzichtelijk voor je verzameld.
+              </p>
+              
+              <ul className="check-list" style={{ marginBottom: "var(--sp-6)" }}>
+                <li><IconCheck /><span>Inclusief matrasbeschermers en onderleggers</span></li>
+                <li><IconCheck /><span>Ruim voldoende kraamverbanden en wondkompressen</span></li>
+                <li><IconCheck /><span>Handige flacon alcohol 70% en verbandwatten</span></li>
+                <li><IconCheck /><span>Alles wat je nodig hebt voor een veilige start</span></li>
+              </ul>
+
+              <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+                <div>
+                  <span style={{ display: "block", fontSize: "0.9rem", color: "var(--text-muted)" }}>Compleet pakket</span>
+                  <span style={{ fontSize: "2rem", fontWeight: "bold", color: "var(--primary)" }}>Slechts €40,-</span>
+                </div>
+                <Link className="btn btn--primary" href="/contact">
+                  Bestel direct bij je aanmelding
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Zorg op maat — cultuur, taal & gewoonten */}
       <section className="section section--soft">
         <div className="container">
