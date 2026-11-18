@@ -26,6 +26,8 @@ export default function ContactPage() {
               contact op. Samen bespreken we hoe ik jou en je kindje kan
               ondersteunen tijdens deze bijzondere periode. Ik hoor graag van
               je!
+              <br /><br />
+              <em>Tip: Je kunt via het formulier hieronder direct het handige <strong>Kraampakket (€40,00)</strong> aanvinken!</em>
             </p>
           </div>
 
